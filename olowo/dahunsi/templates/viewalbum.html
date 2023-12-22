@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Songs</h1>
+
+<table border="1">
+{% for x in album %}
+<tr>
+<td>{{ x.artist }}</td>
+<td>{{ x.album_title }}</td>
+<td>{{ x.genre }}</td>
+<td>{{ x.album_logo }}</td>
+<td><a href="deletealbum/{{ x.id }}">delete</a></td>
+<td><a href="updatealbum/{{ x.id }}">update</a></td>
+</tr>
+    {% endfor %}
+
+</table>
+<p><a href="addalbum">Add member</a>click to add album</p>
+
+</body>
+</html>

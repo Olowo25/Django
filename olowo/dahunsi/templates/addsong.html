@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Add member</h1>
+
+<form action="addingsong" method="post">
+{% csrf_token %}
+artist_id:<br>
+    <input name="id">
+    <br><br>
+artist:<br>
+    <input name="artist">
+    <br><br>
+Song title:<br>
+    <input name="song_title">
+    <br><br>
+Song Genre:<br>
+    <input name="genre">
+    <br><br>
+Song :<br>
+    <input type="file" name="song">
+    <br><br>
+    <input type="submit" value="Submit">
+
+</form>
+
+</body>
+</html>

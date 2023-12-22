@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Update song</h1>
+
+<form action="updatingsong/{{ songz.id }}" method="post">
+{% csrf_token %}
+
+artist:<br>
+    <input name="artist" value="{{songz.artist}}">
+    <br><br>
+song_title:<br>
+    <input name="song_title" value="{{songz.song_title}}">
+    <br><br>
+Genre:<br>
+    <input name="genre" value="{{songz.genre}}">
+    <br><br>
+song :<br>
+    <input type="file" name="song" value="{{songz.song}}">
+    <br><br>
+    <input type="submit" value="Submit">
+
+<input type="submit" value="Update">
+</form>
+
+</body>
+</html>

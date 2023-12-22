@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+<link rel="stylesheet" href="{% static '/mycss.css' %}">
+</head>
+<body>
+
+<h1>Add member</h1>
+
+<form action="addalbum/addingalbum" method="post" >
+{% csrf_token %}
+
+<h1>artist:</h1><br>
+    <input name="artist">
+    <br><br>
+album title:<br>
+    <input name="album_title">
+    <br><br>
+Album Genre:<br>
+    <input name="genre">
+    <br><br>
+album_logo :<br>
+    <input type="file" name="album_logo">
+    <br><br>
+    <input type="submit" value="Submit">
+
+</form>
+
+</body>
+</html>

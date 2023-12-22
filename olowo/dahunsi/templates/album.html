@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+<link rel="stylesheet" href="{% static '/mycss.css' %}">
+</head>
+<body>
+how far
+<form method="POST" class="post-form" enctype="multipart/form-data">
+{% csrf_token %}
+        {{ form2.as_p }}
+    <a href="addalbum" >add album here</a>
+</form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dami</title>
+    {% load static %}
+    <script src="{% static '/simi.js' %}" type="text/javascript"></script>
+    <style src="{% static '/seyi.css' %}" type="text/css"></style>
+</head>
+<body>
+i am damilola from kwara state
+
+<h2>My name is:{{student}}</h2>
+<h2>My Age is:{{age}}</h2>
+<p>My Age is:{{school}}</p>
+
+<button onclick="clickhere()">click</button>
+
+
+<form method="POST" class="post-form">
+{% csrf_token %}
+        {{ form.as_p }}
+
+</body>
+</html>

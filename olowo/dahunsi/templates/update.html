@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Update member</h1>
+
+<form action="updatingalbum/{{ albums.id }}" method="post">
+{% csrf_token %}
+<h1>artist:</h1><br>
+    <input name="artist" value="{{albums.artist}}">
+    <br><br>
+album title:<br>
+    <input name="album_title" value="{{albums.album_title}}">
+    <br><br>
+Album Genre:<br>
+    <input name="genre" value="{{albums.genre}}">
+    <br><br>
+album_logo :<br>
+    <input type="file" name="album_logo" value="{{albums.album_logo}}">
+    <br><br>
+    <input type="submit" value="Submit">
+
+<input type="submit" value="Update">
+</form>
+
+</body>
+</html>

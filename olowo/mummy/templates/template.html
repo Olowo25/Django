@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if greeting == 2 %}
+<h1>Hello</h1>
+{% else %}
+<h1>Bye</h1>
+{% endif %}
+
+<ul>
+{% for x in cars %}
+<li
+      {% if forloop.last %}
+        style='background-color:lightblue;'
+      {% endif %}>{{ x }}</li>
+{% endfor %}
+</ul>
+<h1>Welcome{# Everyone#}</h1>
+</body>
+</html>
